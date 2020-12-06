@@ -55,52 +55,39 @@
     </script>
 
 
-  <!--#set var="MY_CW"   value="kw28" -->
-    <!--#set var="MY_WEEK" value="08.07.2019 - 12.07.2019" -->
-          <!-- Der Wochenplan vom 08.07.2019 - 12.07.2019 https://www.statt-kantine-bielefeld.de/wochenplan_kw28.pdf -->
-           <!-- Wochenplan kw28 - 08.07.2019 - 12.07.2019 -->
-
-  <!--#set var="MY_CW"   value="kw29" -->
-    <!--#set var="MY_WEEK" value="15.07.2019 - 19.07.2019" -->
-          <!-- Der Wochenplan vom 15.07.2019 - 19.07.2019 https://www.statt-kantine-bielefeld.de/wochenplan_kw29.pdf -->
-           <!-- Wochenplan kw29 - 15.07.2019 - 19.07.2019 -->
-
-  <!--#set var="MY_CW"   value="kw50" -->
-    <!--#set var="MY_WEEK" value="09.12.2019 - 13.12.2019" -->
-          <!-- Der Wochenplan vom 09.12.2019 - 13.12.2019 https://www.statt-kantine-bielefeld.de/wochenplan_kw50.pdf -->
-           <!-- Wochenplan kw50 - 09.12.2019 - 13.12.2019 -->
-
-           <!--
-hallo und guten tag.....ostern ist vorbei und der alltag kann kommen.
-hoffe wir sehen uns und wünsche guten appetit
--->
-
-    <div class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#" class="navbar-brand"><img height=100% src="img/logo_246_50.jpg" alt="Statt Kantine Bielefeld" /></a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo_246_50.jpg" height=100% alt="Statt Kantine Bielefeld">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
             <script type="text/javascript">
-                document.write('<li><a href="wochenplan_' + kw + '.pdf">Wochenplan</a></li>');
+              document.write('<a class="nav-link" href="wochenplan_' + kw + '.pdf">Wochenplan</a>');
             </script>
-            <li><a href="newsletter.html">Newsletter</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-            <li><a href="allergene_und_zusatzstoffe.html">Allergene und Zusatzstoffe</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="newsletter.html">Newsletter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="datenschutz.html">Datenschutz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="allergene_und_zusatzstoffe.html">Allergene und Zusatzstoffe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="impressum.html">Impressum</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
     <div class="jumbotron">
       <div class="container">
         <div class="row">
