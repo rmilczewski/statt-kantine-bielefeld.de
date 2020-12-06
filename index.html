@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Statt Kantine Bielefeld Frühstück Mittagessen Verkaufswagen Catering Besprechung Event Essen">
+    <meta name="author" content="Rainer Milczewski">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Statt Kantine Bielefeld</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      function getMonday(d) {
+          d = new Date(d);
+          var day = d.getDay(),
+          diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+          return new Date(d.setDate(diff));
+      }
+      function getFriday(d) {
+          d = new Date(d);
+          var day = getMonday(d);
+          diff = day.getDate() + 4;
+          return new Date(d.setDate(diff));
+      }
+      function getWeek(d) {
+          d = new Date(d);
+          var DonnerstagDat = new Date(d.getTime() + (3-((d.getDay()+6) % 7)) * 86400000);
+          KWJahr = DonnerstagDat.getFullYear();
+          var DonnerstagKW = new Date(new Date(KWJahr,0,4).getTime() + (3-((new Date(KWJahr,0,4).getDay()+6) % 7)) * 86400000);
+          return Math.floor(1.5 + (DonnerstagDat.getTime() - DonnerstagKW.getTime()) / 86400000/7);
+      }
+
+      var today = new Date();
+      var monday = getMonday(today);
+      var friday = getFriday(today);
+      var monday_date = monday.getDate();
+      var friday_date = friday.getDate();
+      var monday_month = monday.getMonth() + 1;
+      var friday_month = friday.getMonth() + 1;
+      var monday_str = ((monday_date < 10) ? "0" + monday_date : monday_date) + "." + ((monday_month < 10) ? "0" + monday_month : monday_month) + ".";
+      var friday_str = ((friday_date < 10) ? "0" + friday_date : friday_date) + "." + ((friday_month < 10) ? "0" + friday_month : friday_month) + ".";
+
+      var week = monday_str + " - " + friday_str + (friday.getYear() + 1900);
+      var kw_num = getWeek(monday);
+      var kw = "kw" + (kw_num < 10 ? "0" : "") + kw_num;
+    </script>
+
+
+  <!--#set var="MY_CW"   value="kw28" -->
+    <!--#set var="MY_WEEK" value="08.07.2019 - 12.07.2019" -->
+          <!-- Der Wochenplan vom 08.07.2019 - 12.07.2019 https://www.statt-kantine-bielefeld.de/wochenplan_kw28.pdf -->
+           <!-- Wochenplan kw28 - 08.07.2019 - 12.07.2019 -->
+
+  <!--#set var="MY_CW"   value="kw29" -->
+    <!--#set var="MY_WEEK" value="15.07.2019 - 19.07.2019" -->
+          <!-- Der Wochenplan vom 15.07.2019 - 19.07.2019 https://www.statt-kantine-bielefeld.de/wochenplan_kw29.pdf -->
+           <!-- Wochenplan kw29 - 15.07.2019 - 19.07.2019 -->
+
+  <!--#set var="MY_CW"   value="kw50" -->
+    <!--#set var="MY_WEEK" value="09.12.2019 - 13.12.2019" -->
+          <!-- Der Wochenplan vom 09.12.2019 - 13.12.2019 https://www.statt-kantine-bielefeld.de/wochenplan_kw50.pdf -->
+           <!-- Wochenplan kw50 - 09.12.2019 - 13.12.2019 -->
+
+           <!--
+hallo und guten tag.....ostern ist vorbei und der alltag kann kommen.
+hoffe wir sehen uns und wünsche guten appetit
+-->
+
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"><img height=100% src="img/logo_246_50.jpg" alt="Statt Kantine Bielefeld" /></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <script type="text/javascript">
+                document.write('<li><a href="wochenplan_' + kw + '.pdf">Wochenplan</a></li>');
+            </script>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="allergene_und_zusatzstoffe.html">Allergene und Zusatzstoffe</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <p>
+              Genießen Sie täglich die Frische und<br/>Abwechslung Ihrer Statt-Kantine!
+            </p>
+            <p>
+              Bestellen Sie unseren <a href="newsletter.html">Newsletter</a><br/>
+              und besuchen Sie uns auf <a href="https://www.facebook.com/Statt.Kantine.Bielefeld" title="Statt Kantine Bielefeld">facebook</a>
+            </p>
+          </div>
+          <div class="col-xs-6">
+            <p class="text-center">
+                Aktueller Wochenplan
+                <br/>
+                <script type="text/javascript">
+                    document.write('<a href="wochenplan_' + kw + '.pdf"><img height="80px" src="img/speiseplan.jpg" alt="Wochenplan"></a>');
+                </script>
+                <br/>
+                <script type="text/javascript">
+                  document.write('<a href="wochenplan_' + kw + '.pdf">' +  kw + ' ' + week + '</a>');
+                </script>
+                <br/>
+                Verkaufswagen vorm Bistro
+                <br/>
+                <script type="text/javascript">
+                    document.write('<a href="verkaufswagen_' + kw + '.pdf"><img height="80px" src="img/speiseplan.jpg" alt="Verkaufswagen"></a>');
+                </script>
+                <br/>
+                <script type="text/javascript">
+                  document.write('<a href="verkaufswagen_' + kw + '.pdf">' +  kw + ' ' + week + '</a>');
+                </script>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Weihnachten zuhause genießen!</h2>
+            <p>
+Am Heiligabend bieten wir Ihnen einen Abholservice
+am Bistro Schelpmilser Weg 16, Ecke Eckendorferstr.
+auf Bestellung für Ihr Weihnachtsmenü an.
+<br/>
+<br/>
+Am 24.12.20 von 11.00 Uhr bis 14.30 Uhr (nur auf Bestellung, keine EC-Kartenzahlung möglich)
+<br/>
+Wildkraftbrühe mit Einlage 3,90 €
+<br/>
+1) Adventsbraten mit weihnachtlichen
+Gewürzen, Lebkuchensoße, geschmorte Pilze
+Rotkohl und Salzkartoffeln 11,50 €
+<br/>
+2) Knusprige Gänsekeule mit Orangensoße,
+Rotkohl und Kartoffelklöße 11,50 €
+<br/>
+3) Wildgulasch mit Pfifferlingen in Rotweinjus, Rosenkohl
+und gebratene Spätzle, dazu Preiselbeerbirne 12,50 €
+<br/>
+4) Rinderroulade Hausfrauen Art mit Speck
+und Gurke, Rotkohl oder Rosenkohl
+und Salzkartoffeln 12,50 €
+<br/>
+Spekulatius-Mousse oder Rote Grütze 2,50 €
+<br/>
+<br/>
+Am 1.Weihnachtstag den 25.12.20 von 11.00 bis 12.00 Uhr (nur auf Bestellung, keine EC-Kartenzahlung möglich)
+<br/>
+Knusprige Weihnachtsgans für 4 Personen
+mit Orangensoße, Rotkohl, Rosenkohl,
+und Kartoffelklöße
+<br/>
+Heiß abgeholt und direkt auf den Tisch für 85,00 €
+<br/>
+<br/>
+Wir wünschen unseren Gästen ein
+Frohes Weihnachtsfest und guten
+Rutsch ins neue Jahr
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Betriebsferien 06.06.2018 - 22.06.2018 im Bistro Schelpmilserweg 16</h2>
+            <p>
+                Liebe Gäste,
+                <br/><br/>
+                in der Zeit vom 06.06.2018 bis einschließlich 22.06.2018 haben wir in unserem Bistro Betriebsferien.
+                <br/>
+                Gerne können Sie uns in einem unserer anderen Häuser besuchen.
+                <br/>
+                Ansonsten freuen wir uns Sie ab dem 25.06.2018 wieder im Bistro begrüßen zu dürfen.
+                <br/><br/>
+                Viele Grüße
+                <br/>
+                Das Team der Statt Kantine
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+<!--
+  <div class="col-xs-12">
+    <h2>Filialen bis auf weiteres für die Öffentlichkeit geschlossen</h2>
+    <p>
+      Liebe Gäste,
+      <br/>
+      da unsere Filialen in den unterschiedlichen Häusern bis auf weiteres für die
+      Öffentlichkeit geschlossen sind, können wir Sie leider momentan nicht
+      bewirten.
+      <br/>
+      Dies bedauern wir natürlich sehr.
+      <br/>
+      Wenn Sie sich für den Newsletter anmelden, können Sie einen Speiseplan
+      einsehen. Dieser gilt ab dem Tag an dem unsere Filialen wieder geöffnet haben.
+      Wir hoffen alle auf ein baldiges Ende der Pandemie, bleiben Sie gesund.
+      <br/>
+      Ihr Team der Statt-Kantine
+          </p>
+        </div>
+-->
+        <div class="col-xs-12">
+          <h2>Herzlich Willkommen auf unserer Homepage und in unseren Filialien</h2>
+          <p>
+            Da auch uns Corona kräftig auf Trab hält ist es leider noch nicht allen Häusern gegönnt für die Öffentlichkeit zu öffnen.
+            <br/>
+            Die <strong>Handwerkskammer Bielefeld</strong>, <strong>Bundesagentur für Arbeit in Herford</strong>, 
+            <strong>DHL Frachtzentrum in Bielefeld</strong> und unser <strong>Bistro</strong> sind noch <strong>nicht</strong> zugänglich.
+            <br/>
+            In allen weiteren Häusern freuen wir uns auf Sie und möchten auf Maskenpflicht, Abstandsregelung und 
+            Meldepflicht durch Bekanntgabe des Namens, Uhrzeit und Telefonnummer hinweisen.
+            Sollte es Ihnen nicht Recht sein können Sie alle Speisen auch außer Haus zur Abholung bekommen.
+            Aber auch bei Abholung ist Mundschutzpflicht.
+            <br/>
+            Auch unser Cateringbereich ist im vollen Umfang möglich. Rufen Sie bei Fragen gerne an.
+            <br/><br/>
+            Liebe Grüße vom Statt-Kantinen Team in Herford, Bielefeld und Paderborn - bleiben Sie gesund.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Aktuelle Jobangebote</h2>
+            <p>
+              Für unsere Betriebskantinen in Bielefeld, Herford und Paderborn sowie für Events und Stadtfeste suchen wir gut geschultes Personal für die Bereiche:
+              <ul>
+                <li>Frühstück (Zubereitung und Verkauf), in der Zeit von 07:00 Uhr - 10:00 Uhr</li>
+                <li>Speisenausgabe, in der Zeit von 11:30 Uhr - 13:30 Uhr</li>
+                <li>Kasse, in der Zeit von 11:45 Uhr - 13:30 Uhr</li>
+                <li>Küche/Produktion, ca. 3 - 6 Stunden täglich</li>
+                <li>Koch m/w, 450,00 Euro, geringfügig oder Vollzeit</li>
+                <!-- <li>Verkauf in unserer Cafeteria, Mo.-Fr. von 12:00 Uhr - 16:00 Uhr und 16:00 Uhr - 19:30 Uhr, Sa.von 07:00 Uhr - 14:00 Uhr</li> -->
+                <li>Event- und Servicekräfte für Sonderveranstaltungen</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/slide-1.jpg" alt="" />
+          <h2>Frühstück</h2>
+          <p><strong>täglich ab 5:30 Uhr</strong></p>
+          <p>
+            Starten Sie in den Tag mit frischen, gut belegten Brötchen und einem frisch gebrühten Kaffee.
+            Einfach bei uns vorfahren, Brötchentüte und Kaffeebecher schnappen und schon gehts weiter zur Arbeit.
+            Oder Sie gönnen sich ein wenig Zeit und frühstücken direkt bei uns.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/slide-2.jpg" alt="" />
+          <h2>Mittagessen</h2>
+          <p><strong>täglich ab 11:30 Uhr</strong></p>
+          <p>
+            Frisch zubereitet, direkt und schnell aus unserer Wochenkarte.
+            Einfach aussuchen und bei uns in Ruhe genießen.
+            Oder müssen Sie schnell wieder an Ihren Arbeitsplatz?
+            Dann packen wir Ihr Essen natürlich sorgfältig ein.
+            Einfach vorher anrufen und abholen.
+          </p>
+        </div>
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/slide-4.jpg" alt="" />
+          <h2>Immer</h2>
+          <p><strong>im Angebot</strong></p>
+          <p>
+            Schnitzel mit Champignons oder Paprikarahm,
+            Currywurst mit Pommes,
+            Hamburger,
+            Suppe oder Eintopf.
+          </p>
+          <p><strong>täglich mehrere Gerichte ab 4,50 Euro zur Auswahl</strong></p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/slide-3.jpg" alt="" />
+          <h2>Salate, Kuchen</h2>
+          <p><strong>und mehr</strong></p>
+          <p>
+            Neben unseren warmen Speisen bieten wir Ihnen knackige Salate,
+            leckeren Kuchen (hausgebacken oder frisch vom Bäcker)
+            sowie unterschiedliche Desserts und Gebäck.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Hier finden Sie uns</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <strong>Statt-Kantine-Bielefeld Bistro</strong><br/>
+            Schelpmilserweg 16<br/>
+            33609 Bielefeld<br/>
+            Telefon: +49 521 23831234<br/>
+            E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+            Öffnungszeiten: Montag-Freitag 06:00 Uhr - 15:00 Uhr<br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <strong>Statt-Kantine-Bielefeld in der Handwerkskammer OWL zu Bielefeld</strong><br/>
+            Campus Handwerk 1<br/>
+            33613 Bielefeld<br/>
+            Telefon: +49 521 5608590<br/>
+            E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+            Öffnungszeiten: Montag-Freitag 07:00 Uhr - 19:30 Uhr, Samstag 07:00 Uhr - 14:00 Uhr
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <strong>Statt-Kantine-Bielefeld im Finanzamt Herford</strong><br/>
+            Wittekindstr. 5<br/>
+            32051 Herford<br/>
+            Telefon: +49 5221 1881389<br/>
+            E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+            Öffnungszeiten: Montag-Freitag 08:00 Uhr - 13:00 Uhr
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <strong>Statt-Kantine-Bielefeld in der Stadtverwaltung Paderborn</strong><br/>
+            Am Hoppenhof 33<br/>
+            33104 Paderborn<br/>
+            E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+            Öffnungszeiten: Montag-Freitag 07:00 Uhr - 14:00 Uhr
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <p>
+              <strong>Statt-Kantine-Bielefeld in der Arbeiterwohlfahrt (AWO)</strong><br/>
+              Detmolder Str. 280<br/>
+              33605 Bielefeld<br/>
+              Telefon: +49 521 9216-404<br/>
+              E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+              Öffnungszeiten: Montag-Freitag 07:30 Uhr - 14:00 Uhr
+            </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <p>
+              <strong>Statt-Kantine-Bielefeld in der Kantar Shared Services GmbH &amp; Co. KG</strong><br/>
+              Stieghorster Str. 86-90<br/>
+              33605 Bielefeld<br/>
+              Telefon: +49 521 9257208<br/>
+              E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+              Öffnungszeiten: Montag-Freitag 08:00 Uhr - 14:00 Uhr (nur für Betriebsangehörige)
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <p>
+              <strong>Statt-Kantine-Bielefeld im Briefzentrum Herford</strong><br/>
+              Bielefelder Str. 242<br/>
+              32051 Herford<br/>
+              Telefon: +49 5221 1253864<br/>
+              E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+              Öffnungszeiten: Montag-Freitag 07:00 Uhr - 14:00 Uhr
+            </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <p>
+              <strong>Statt-Kantine-Bielefeld im DHL Frachtzentrum Bielefeld</strong><br/>
+              Dingerdisser Str. 37<br/>
+              33691 Bielefeld<br/>
+              E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+              Öffnungszeiten: Montag-Freitag 05:45 Uhr - 14:30 Uhr
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <p>
+              <strong>Statt-Kantine-Bielefeld in der Bundesagentur für Arbeit</strong><br/>
+              Hansastr. 33<br/>
+              32049 Herford<br/>
+              Telefon: +49 5221 985421<br/>
+              E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+              <!-- Öffnungszeiten: Montag-Freitag 08:00 Uhr - 14:00 Uhr -->
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Unser Kantinen-, Catering- &amp; Event-Service</h2>
+            <p>Für Ihr Meeting, Ihr Event oder Ihren Betrieb</p>
+            <p><strong>Individuell, frisch und preiswert</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/gesch-3.jpg" alt="" />
+          <h2>Bespre<wbr>chung</h2>
+          <p><strong>Einfach organisiert</strong></p>
+          <p>
+            Sie brauchen Stärkung in einer langen Besprechung?
+            Gern stellen wir Ihnen Meetingplatten mit Brötchen, Gebäck und Kaffee oder Fingerfoodplatten abholbereit zusammen;
+            oder liefern bei Vorbestellung.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/gesch-4.jpg" alt="" />
+          <h2>Event</h2>
+          <p><strong>Aus einer Hand</strong></p>
+          <p>
+            Sie haben eine Veranstaltung bei sich zu Hause?
+            Gern liefern wir Ihnen die Speisen und Getränke, individuell für Sie zusammen gestellt.<br/>
+            Und natürlich organisieren wir auch das Geschirr und die Bewirtung.
+          </p>
+        </div>
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/gesch-1.jpg" alt="" />
+          <h2>Kantine</h2>
+          <p><strong>Täglich frisch</strong></p>
+          <p>
+            Sie suchen einen Betreiber für Ihre Betriebskantine?
+            Wir bieten Ihnen vielfältiges Frühstück und Mittagessen sowie Salate und leckere Desserts.
+            Individuell bei Ihnen zubereitet oder zu Ihnen geliefert.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img width=100% max-width=100% src="img/gesch-2.jpg" alt="" />
+          <h2>Verkaufs<wbr>wagen</h2>
+          <p><strong>Schnell vor Ort</strong></p>
+          <p>
+            Sie haben keine Räume für eine eigene Kantine oder ein spezielles Event?
+            Mit unserem Verkaufswagen bieten wir Ihnen vor Ort Kantinen-Service mit leckeren Brötchen, Kaffee und Mittagsgerichte.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Sprechen Sie uns an</h2>
+          <p>
+            Michael Schindler<br/>
+            Finkenstraße 49<br/>
+            33609 Bielefeld<br/>
+            Telefon: +49 521 9876518<br/>
+            Mobil: +49 173 1776600<br/>
+            E-Mail: <a href="mailto:info@statt-kantine-bielefeld.de">info@statt-kantine-bielefeld.de</a><br/>
+            Bürozeiten: Montag-Mittwoch von 09:00 - 13:00 Uhr
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Statt Kantine Bielefeld 2020</p>
+      </footer>
+
+    </div><!--/.container-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
