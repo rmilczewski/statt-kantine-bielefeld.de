@@ -1,136 +1,356 @@
-
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Statt Kantine Bielefeld">
-    <meta name="author" content="Rainer Milczewski">
-    <link rel="icon" href="favicon.ico">
 
-    <title>Statt Kantine Bielefeld</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Statt Kantine Bielefeld">
+  <meta name="author" content="Rainer Milczewski">
+  <link rel="icon" href="favicon.ico">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <title>Statt Kantine Bielefeld</title>
 
-    <link href="style.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/logo_246_50.jpg" height=100% alt="Statt Kantine Bielefeld">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo_246_50.jpg" height=100% alt="Statt Kantine Bielefeld">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">Home</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Newsletter <span class="sr-only">(current)</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="datenschutz.html">Datenschutz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="allergene_und_zusatzstoffe.html">Allergene und Zusatzstoffe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="impressum.html">Impressum</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    
-    <div id="newsletter" class="container">
-      <style>
-        .cr_site{margin:0;padding:75px 0 0 0;text-align:center;background-color:#eeeeee;}
-        .cr_font{font-size: 14px;font-family: Arial;}
-        .cr_body h2, .cr_header h2{font-size:22px;line-height:28px;margin:0 0 10px 0;}
-        .cr_body h1, .cr_header h2{font-size:28px;margin-bottom:15px;padding:0;margin-top:0;}
-        .wrapper, .cr_page{margin:0 auto 10px auto;text-align:left;border-radius:4px;}
-        .cr_header{text-align:center;background: transparent !Important;}
-        .cr_body label{float:none;clear:both;display:block;width:auto;margin-top:8px;text-align:left;font-weight:bold;position:relative;}
-        .cr_button{display:inline-block;font-family:'Helvetica', Arial, sans-serif;width:auto;white-space:nowrap;height:32px;margin:5px 5px 0 0;padding:0 22px;text-decoration:none;text-align:center;font-weight:bold;font-style:normal;font-size:15px;line-height:32px;cursor:pointer;border:0;-moz-border-radius:4px;border-radius:4px;-webkit-border-radius:4px;vertical-align:top;}
-        .cr_button{background-color:#333;color:#ffffff;}
-        .cr_button:hover,.cr_button-small:hover{opacity:0.7;filter:alpha(opacity=70);}
-        .powered{padding:20px 0;width:560px;margin:0 auto;}
-        .formbox{line-height:150%;font-family:Helvetica;font-size:12px;color:#333333;padding:20px;background-color:#ffffff;border-radius: 6px 6px 6px 6px;}
-        .cr_ipe_item label{line-height:150%;font-size:14px;}
-        .cr_ipe_item textarea {background: none repeat scroll 0 0 #eeeeee;border: 1px solid #aaa;font-family: Helvetica;font-size: 16px;}
-        .cr_ipe_item input {background: none repeat scroll 0 0 #eeeeee;border: 1px solid #aaa;padding: 5px;font-family: Helvetica;font-size: 16px;}
-        .cr_ipe_item select {background: none repeat scroll 0 0 #eeeeee;border: 1px solid #aaa;display: block;margin: 0;padding: 5px;width: 100%;font-family: Helvetica;font-size: 16px;}
-        .cr_ipe_item input.cr_ipe_radio, input.cr_ipe_checkbox {-moz-binding: none;-moz-box-sizing: border-box;background-color: -moz-field !important;border: 2px inset threedface !important;color: -moz-fieldtext !important;cursor: default;height: 13px;padding: 0 !important;width: 13px;}
-        .cr_ipe_item input.cr_ipe_radio{-moz-appearance: radio;border-radius: 100% 100% 100% 100% !important;margin: 3px 3px 0 5px;}
-        .submit_container{text-align:center}
-        .cr_ipe_item{ padding:1px 10px; margin:1px 10px; }
-        .cr_ipe_item.inactive {display:none;}
-        .imprint{font-size:0.8em;}
-        .cr_captcha{padding-left:130px;}
-        .cr_error{font-size:1.1em;padding:10px;}
-        .clever_form_error{background-color:#f99; color:#000; border:1px solid #f22 !important}
-        .clever_form_note {margin:26px 0 0 3px;position:absolute;display:inline; padding: 2px 4px; font-weight:bold;background-color:#f2ecb5; color:#000; font-size:12px !important;  }
-        .cr_site {background-color:#eee;}
-        .cr_header {color:#000000;}
-        .cr_body {background-color:#ffffff;font-size:12px;color:#000000;}
-        .cr_hr {background-color:#ccc;}
-        .cr_site a {color:#0084ff;}
-        .imprint{color:#000;}
-        
-        </style>
-        
-        
-        <style id="style">
-        .cr_site {background-color:#eee;}
-        .cr_header {color:#000000;}
-        .cr_body {background-color:#ffffff;font-size:12px;color:#000000;}
-        .cr_hr {background-color:#ccc;}
-        .cr_site a {color:#0084ff;}
-        .imprint {color:#000;}
-        .cr_page {width:640px;}
-        
-        </style>
-        
-        
-        
-        <form class="layout_form cr_form cr_font" action="https://seu1.cleverreach.com/f/45681-105682/wcs/" method="post" target="_blank">
-          <div class="cr_body cr_page cr_font formbox">
-            <div class="non_sortable" style="text-align:left;">
-              
-            </div>
-            
-            <div class="editable_content" style="text-align:left;">
-            <div id="2120794" rel="text" class="cr_ipe_item ui-sortable" style=" margin-bottom:0px;">
-        <label for="text2120794" class="itemname">Vorname</label> <input id="text2120794" name="1038303" type="text" value="" style="width:100%;" />
-        </div><div id="2120795" rel="text" class="cr_ipe_item ui-sortable" style=" margin-bottom:0px;">
-        <label for="text2120795" class="itemname">Nachname</label> <input id="text2120795" name="1038304" type="text" value="" style="width:100%;" />
-        </div><div id="2120790" rel="email" class="cr_ipe_item ui-sortable musthave" style="margin-bottom:px;">
-        <label for="text2120790" class="itemname">E-Mail*</label> <input id="text2120790" name="email" value="" type="text" style="width:100%;" />
-        </div><div id="2120792" rel="button" class="cr_ipe_item ui-sortable submit_container" style="text-align:center; margin-bottom:px;">
-        <button type="submit" class="cr_button">Anmelden</button>
-        </div>
-                </div>
-                
-          <noscript><a href="http://www.cleverreach.de">www.CleverReach.de</a></noscript>
-            </div>
-        
-            
-        </form>
-
-      <footer>
-        <p>&copy; Statt Kantine Bielefeld 2020</p>
-      </footer>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Newsletter <span class="sr-only">(current)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="datenschutz.html">Datenschutz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="allergene_und_zusatzstoffe.html">Allergene und Zusatzstoffe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="impressum.html">Impressum</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Bootstrap core JavaScript
+  <div id="newsletter" class="container">
+    <style>
+      .cr_site {
+        margin: 0;
+        padding: 75px 0 0 0;
+        text-align: center;
+        background-color: #eeeeee;
+      }
+
+      .cr_font {
+        font-size: 14px;
+        font-family: Arial;
+      }
+
+      .cr_body h2,
+      .cr_header h2 {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 0 0 10px 0;
+      }
+
+      .cr_body h1,
+      .cr_header h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .wrapper,
+      .cr_page {
+        margin: 0 auto 10px auto;
+        text-align: left;
+        border-radius: 4px;
+      }
+
+      .cr_header {
+        text-align: center;
+        background: transparent !Important;
+      }
+
+      .cr_body label {
+        float: none;
+        clear: both;
+        display: block;
+        width: auto;
+        margin-top: 8px;
+        text-align: left;
+        font-weight: bold;
+        position: relative;
+      }
+
+      .cr_button {
+        display: inline-block;
+        font-family: 'Helvetica', Arial, sans-serif;
+        width: auto;
+        white-space: nowrap;
+        height: 32px;
+        margin: 5px 5px 0 0;
+        padding: 0 22px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 32px;
+        cursor: pointer;
+        border: 0;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        vertical-align: top;
+      }
+
+      .cr_button {
+        background-color: #333;
+        color: #ffffff;
+      }
+
+      .cr_button:hover,
+      .cr_button-small:hover {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .powered {
+        padding: 20px 0;
+        width: 560px;
+        margin: 0 auto;
+      }
+
+      .formbox {
+        line-height: 150%;
+        font-family: Helvetica;
+        font-size: 12px;
+        color: #333333;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 6px 6px 6px 6px;
+      }
+
+      .cr_ipe_item label {
+        line-height: 150%;
+        font-size: 14px;
+      }
+
+      .cr_ipe_item textarea {
+        background: none repeat scroll 0 0 #eeeeee;
+        border: 1px solid #aaa;
+        font-family: Helvetica;
+        font-size: 16px;
+      }
+
+      .cr_ipe_item input {
+        background: none repeat scroll 0 0 #eeeeee;
+        border: 1px solid #aaa;
+        padding: 5px;
+        font-family: Helvetica;
+        font-size: 16px;
+      }
+
+      .cr_ipe_item select {
+        background: none repeat scroll 0 0 #eeeeee;
+        border: 1px solid #aaa;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        width: 100%;
+        font-family: Helvetica;
+        font-size: 16px;
+      }
+
+      .cr_ipe_item input.cr_ipe_radio,
+      input.cr_ipe_checkbox {
+        -moz-binding: none;
+        -moz-box-sizing: border-box;
+        background-color: -moz-field !important;
+        border: 2px inset threedface !important;
+        color: -moz-fieldtext !important;
+        cursor: default;
+        height: 13px;
+        padding: 0 !important;
+        width: 13px;
+      }
+
+      .cr_ipe_item input.cr_ipe_radio {
+        -moz-appearance: radio;
+        border-radius: 100% 100% 100% 100% !important;
+        margin: 3px 3px 0 5px;
+      }
+
+      .submit_container {
+        text-align: center
+      }
+
+      .cr_ipe_item {
+        padding: 1px 10px;
+        margin: 1px 10px;
+      }
+
+      .cr_ipe_item.inactive {
+        display: none;
+      }
+
+      .imprint {
+        font-size: 0.8em;
+      }
+
+      .cr_captcha {
+        padding-left: 130px;
+      }
+
+      .cr_error {
+        font-size: 1.1em;
+        padding: 10px;
+      }
+
+      .clever_form_error {
+        background-color: #f99;
+        color: #000;
+        border: 1px solid #f22 !important
+      }
+
+      .clever_form_note {
+        margin: 26px 0 0 3px;
+        position: absolute;
+        display: inline;
+        padding: 2px 4px;
+        font-weight: bold;
+        background-color: #f2ecb5;
+        color: #000;
+        font-size: 12px !important;
+      }
+
+      .cr_site {
+        background-color: #eee;
+      }
+
+      .cr_header {
+        color: #000000;
+      }
+
+      .cr_body {
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #000000;
+      }
+
+      .cr_hr {
+        background-color: #ccc;
+      }
+
+      .cr_site a {
+        color: #0084ff;
+      }
+
+      .imprint {
+        color: #000;
+      }
+    </style>
+
+
+    <style id="style">
+      .cr_site {
+        background-color: #eee;
+      }
+
+      .cr_header {
+        color: #000000;
+      }
+
+      .cr_body {
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #000000;
+      }
+
+      .cr_hr {
+        background-color: #ccc;
+      }
+
+      .cr_site a {
+        color: #0084ff;
+      }
+
+      .imprint {
+        color: #000;
+      }
+
+      .cr_page {
+        width: 640px;
+      }
+    </style>
+
+
+
+    <form class="layout_form cr_form cr_font" action="https://seu1.cleverreach.com/f/45681-105682/wcs/" method="post"
+      target="_blank">
+      <div class="cr_body cr_page cr_font formbox">
+        <div class="non_sortable" style="text-align:left;">
+
+        </div>
+
+        <div class="editable_content" style="text-align:left;">
+          <div id="2120794" rel="text" class="cr_ipe_item ui-sortable" style=" margin-bottom:0px;">
+            <label for="text2120794" class="itemname">Vorname</label> <input id="text2120794" name="1038303" type="text"
+              value="" style="width:100%;" />
+          </div>
+          <div id="2120795" rel="text" class="cr_ipe_item ui-sortable" style=" margin-bottom:0px;">
+            <label for="text2120795" class="itemname">Nachname</label> <input id="text2120795" name="1038304"
+              type="text" value="" style="width:100%;" />
+          </div>
+          <div id="2120790" rel="email" class="cr_ipe_item ui-sortable musthave" style="margin-bottom:px;">
+            <label for="text2120790" class="itemname">E-Mail*</label> <input id="text2120790" name="email" value=""
+              type="text" style="width:100%;" />
+          </div>
+          <div id="2120792" rel="button" class="cr_ipe_item ui-sortable submit_container"
+            style="text-align:center; margin-bottom:px;">
+            <button type="submit" class="cr_button">Anmelden</button>
+          </div>
+        </div>
+
+        <noscript><a href="http://www.cleverreach.de">www.CleverReach.de</a></noscript>
+      </div>
+
+
+    </form>
+
+    <footer>
+      <p>&copy; Statt Kantine Bielefeld 2020</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 
-  </body>
+</body>
+
 </html>
